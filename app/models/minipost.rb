@@ -1,0 +1,6 @@
+class Minipost < ActiveRecord::Base
+  attr_accessible :content, :integer, :user_id
+  validates :content, :length => { :maximum => 140 }
+  belongs_to :user
+end
+
